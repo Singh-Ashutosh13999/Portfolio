@@ -1,95 +1,145 @@
-.navbar{
-    background-color:rgb(0,110,120);
-  width:100wh;
-  max-width:80rem;
-  hight:4rem;
-  margin:0 auto ;
-  padding:1rem 2rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  top:0; 
-  position:sticky;
-  z-index:3;
-}
-.Logoname{
-    object-fit:cover;
-    height:3rem;
-    width:4rem;
-}
-.Headmenu{
-    margin:1rem;
-    cursor:pointer;
-
-}
-.Headmenu:hover{
-    color:black;
-    padding-bottom:0.5rem;
-    border-bottom:3px solid red;
-}
-.Menubuttom{
-    background-color:white;
-    color:black;
-    align-items:center;
-    justify-content:center;
-    border-radius:2rem;
-    padding:0 1rem;
-    cursor:pointer;
-    border:none;
-}
-.ContactImg{
-    width:4rem;
-    height:2rem;
-    object-fit:cover;
-    cursor:pointer;
-    
-    
-}
-.active{
-    color:rgb(232,123,111);
-}
-.mobMenu{
-    display:none;
-    object-fit:cover;
-    height:2rem;
-
-
-}
-.NevMenu{
-    position:absolute;
-    top:6rem;
-    right:2rem;
-    z-index:2;
-    display:flex;
-    flex-direction:column;
-    padding:0.5rem;
-    height:fir-content;
-    min-width:15rem;
-    background-color:rgb(50,50,50);
-}
-.Mmenu{
-    color:white;
-    padding:.5rem 4rem;
-    margin:.25rem;
-    cursor:pointer;
-    background-color:rgb(30,30,30);
-}
-.Mmenu:hover{
-    padding-bottom:0.5rem;
-    border-bottom:3px solid yellow;
-}
-@media screen and (max-width:720px)
-{
-   .mobMenu {
-    display:flex;
-    
-
-   } 
-   .desktopMenu{
-    display:none;
-   }
-   .Menubuttom{
-    display:none;
-   }
-   
-}
+/* Global Styles */
+:root {
+    --primary-color: rgb(0, 110, 120);
+    --secondary-color: rgb(232, 123, 111);
+    --hover-border-color: yellow;
+    --bg-color: rgb(30, 30, 30);
+    --text-color: white;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #00ABE4;
+    width: 100%;
+    max-width: 100rem;
+    height: 4rem;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(0, 110, 120, 0.9);
+  }
+  
+  /* Logo Styling */
+  .Logoname {
+    object-fit: cover;
+    height: 3rem;
+    width: auto;
+  }
+  
+  /* Header Menu Styling */
+  .Headmenu {
+    margin: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  .Headmenu:hover {
+    color: black;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+  }
+  
+  /* Menu Button Styling */
+  .Menubuttom {
+    background-color: white;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Menubuttom:hover {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  /* Contact Image Styling */
+  .ContactImg {
+    width: 4rem;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  /* Active Menu Item Styling */
+  .active {
+    color: var(--secondary-color);
+  }
+  
+  /* Mobile Menu Icon */
+  .mobMenu {
+    display: none;
+    object-fit: cover;
+    height: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Menu Styling */
+  .NevMenu {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-width: 15rem;
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Mmenu {
+    color: var(--text-color);
+    padding: 0.75rem 2rem;
+    margin: 0.25rem 0;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  
+  .Mmenu:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--hover-border-color);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 720px) {
+    .mobMenu {
+      display: flex;
+    }
+    .desktopMenu {
+      display: none;
+    }
+    .Menubuttom {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 721px) {
+    .mobMenu {
+      display: none;
+    }
+  }
+  
+  /* Animation for Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  

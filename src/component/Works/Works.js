@@ -10,24 +10,67 @@ import Unit from "..//..//assest//Unit.jpg"
 const Works = () => {
   return ( 
      <section className='Work' id='Works'>
-     <h4 className='WorkT'>My Portfolio</h4>
-     <span className='WorkD'>During my works in "Web technology", I gained practical experience in designing and
-      developing web applications. I collaborated with cross-functional teams to implement responsive and user-friendly
-       interfaces, utilizing HTML, CSS, JavaScript and ReactJs. I contributed to the deployment and maintenance of websites,
-        ensuring optimal performance and usability. Additionally, I acquired hands-on experience with various web
-         development frameworks and tools, enhancing my skills in front-end and back-end technologies.My skills allowed me
-          to apply theoretical knowledge in a real-world setting, fostering a deep understanding of web development
-           best practices and trends</span>
-           <div className='WorkImgs'>
-            <ol>
-           <li><a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies2'> <img src={cal} alt="Calculator" /></a></li>
-           <li><a href='https://github.com/Singh-Ashutosh13999/Snakegame'> <img src={snake} alt="Snake" /></a></li>
-           <li><a href='https://github.com/Singh-Ashutosh13999/TreueTEchnologies4'><img src={testi} alt="Testimonial"/></a></li>
-           <li><a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies'><img src={landing} alt="Landing" /></a></li>
-           <li><a href='https://github.com/Singh-Ashutosh13999/Color_generator'><img src={BC} alt="Color-Changer" /></a></li>
-           <li><a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies1/blob/main/U.js'><img src={Unit} alt="Color-Changer" /></a></li>
-            </ol>
-            </div>
+     <h4 className='WorkT'>Experience</h4>
+     <span className='WorkD'>During my work in Web Technology, I gained hands-on experience designing and developing responsive web applications using HTML, CSS, JavaScript, and ReactJS. I collaborated with teams to create user-friendly interfaces, deployed and maintained websites for optimal performance, and honed my skills with modern web development tools and frameworks, bridging theory and real-world practice.</span>
+     <a
+  href="https://example.com/certificate"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="certificate-button"
+>
+  View Certificate
+</a>
+
+     
+           <div className='Work'>
+  <h2 className='WorkT'>My Projects</h2>
+  <p className='WorkD'>Here are some of the projects I've worked on recently.</p>
+  
+  <div className='WorkImgs'>
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies2'>
+        <img src={cal} alt="Calculator" />
+        <div className='WorkImgContent'>Calculator Project</div>
+      </a>
+    </div>
+    
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/Snakegame'>
+        <img src={snake} alt="Snake Game" />
+        <div className='WorkImgContent'>Snake Game Project</div>
+      </a>
+    </div>
+    
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/TreueTEchnologies4'>
+        <img src={testi} alt="Testimonial" />
+        <div className='WorkImgContent'>Testimonial Project</div>
+      </a>
+    </div>
+    
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies'>
+        <img src={landing} alt="Landing Page" />
+        <div className='WorkImgContent'>Landing Page Project</div>
+      </a>
+    </div>
+    
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/Color_generator'>
+        <img src={BC} alt="Color Generator" />
+        <div className='WorkImgContent'>Color Generator</div>
+      </a>
+    </div>
+    
+    <div className='WorkImg'>
+      <a href='https://github.com/Singh-Ashutosh13999/-TreueTechnologies1/blob/main/U.js'>
+        <img src={Unit} alt="Unit Converter" />
+        <div className='WorkImgContent'>Unit Converter</div>
+      </a>
+    </div>
+  </div>
+</div>
+
             
              
      </section>

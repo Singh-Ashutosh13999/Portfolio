@@ -1,34 +1,155 @@
-.ED{
-    margin: 4rem auto;
-    width:100vw;
-    max-width:70rem;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-contain:center;
-    text-align:center;
-    padding:0 1rem;
-    background-color:rgb(0,118,130)
-    
-}
-.EH{
-    font-size:2.5rem;
-    font-weight:300;
-    color:black;
-}
-.EDesc{
-    font-size:1.5rem;
-    font-weight:250;
-
-}
-.Result{
-margin:1rem;
-}
-.H1,.I,.UG,.PG{
-    margin:2rem;
-    
-    
-
-    
+/* Global Variables */
+:root {
+  --primary-color: rgb(0, 118, 130);
+  --accent-color: #ffcc00;
+  --background-color: #f0f0f0;
+  --text-color: #fff;
+  --card-bg-color: rgba(255, 255, 255, 0.9);
+  --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --heading-color: #333;
 }
 
+/* Education Section Styling */
+.ED {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #E9F1FA;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Hover Animation for the Section */
+.ED:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Education Header Styling */
+.EH {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00ABE4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Education Description Styling */
+.EDesc {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #00ABE4;
+  max-width: 50rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Individual Result Block */
+.Result {
+  background-color: #00ABE4;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header Sections (H1, I, UG, PG) */
+.H1, .I, .UG, .PG {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: ;
+  color: #E9F1FA;
+  font-weight: 400;
+  font-size: 1.5rem;
+  
+  cursor: pointer;
+}
+
+.H1:hover, .I:hover, .UG:hover, .PG:hover {
+  transform: translateY(-5px);
+  box-shadow: #E9F1FA;
+  background-color: #E9F1FA;
+  color: #00ABE4;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styling for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .ED {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .EH {
+    font-size: 2rem;
+  }
+
+  .EDesc {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .Result {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .H1, .I, .UG, .PG {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .EH {
+    font-size: 1.75rem;
+  }
+
+  .EDesc {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .Result {
+    padding: 0.75rem;
+  }
+
+  .H1, .I, .UG, .PG {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}

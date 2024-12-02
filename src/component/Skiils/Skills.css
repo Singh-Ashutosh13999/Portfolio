@@ -1,64 +1,137 @@
-.Skill{
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    width:100vw;
-    max-width:70rem;
-    display:felx;
-    overflow:hidden;
-    flex-direction:column;
-    margin:6rem auto;
-    background-color:rgb(0,118,130);
+/* Global Variables */
+:root {
+  --primary-color: #696969;
+  --secondary-color: #D2D9D3;
+  --accent-color: rgb(0, 100, 100);
+  --hover-color: green;
+  --text-color: white;
 }
-.SkillsT{
-    font-size:2.5rem;
-    font-weight:500;
-    padding-top:2rem;
-    margin-bottom:2rem;
-    color:#D2D9D3;
-    
-    }
 
-.SkillsDec{
-    font-weight:400;
-    font-size:1.25rem;
-    max-width:30rem;
-  padding:0 2rem;
-  
+/* Skills Section */
+.Skill {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  margin: 6rem auto;
+  background-color: #E9F1FA;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
- .SkillsBar{
-    margin:4rem auto;
-    width:100vw;
-    max-width:80%;
-    text-align:left;
-    background-size:contain;
- }
- .Sbar
- {
-   padding:2rem;
-    display:flex;
-    margin:1rem;
-    padding:1rem 1.5rem;
-    border-radius:.6rem;
-    background-color:rgb(0,100,100);
-    
 
- }
- .SkillsBarImg{
-    object-fit:cover;
-    height:4rem;
-    width:4rem;
-    margin-right:2rem;
-    cursor:pointer;
- }
- 
- .SbarText>p {
-  font-size:.9rem;
-  font-weight:100;
- }
- 
- h2:hover{
-    border-bottom:1px solid green;
-    cursor:pointer;
-    
+.Skill:hover {
+  transform: scale(1.02);
+}
+
+/* Skills Title */
+.SkillsT {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #00ABE4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skills Description */
+.SkillsDec {
+  font-weight: 400;
+  font-size: 1.25rem;
+  max-width: 30rem;
+  padding: 0 2rem;
+  color: #00ABE4;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Skills Bar Container */
+.SkillsBar {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 80%;
+  text-align: left;
+}
+
+/* Individual Skill Bar */
+.Sbar {
+  padding: 1.5rem;
+  display: flex;
+  margin: 1rem 0;
+  border-radius: 0.6rem;
+  background-color: #00ABE4;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.Sbar:hover {
+  background-color: #FFFFFF;
+}
+
+/* Skill Bar Image */
+.SkillsBarImg {
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.SkillsBarImg:hover {
+  transform: scale(1.1);
+}
+
+/* Skill Bar Text */
+.SbarText > p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Hover Effect for Headings */
+h2:hover {
+  border-bottom: 2px solid #00ABE4;
+  cursor: pointer;
+  color: #00ABE4;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 720px) {
+  .Skill {
+    margin: 4rem auto;
+    padding: 1.5rem;
+  }
+
+  .SkillsT {
+    font-size: 2rem;
+  }
+
+  .SkillsDec {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .Sbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .SkillsBarImg {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 468px) {
+  .Skill {
+    padding: 2rem 4rem;
+  }
 }
