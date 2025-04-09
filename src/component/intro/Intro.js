@@ -15,8 +15,10 @@ function Intro() {
       <p className="D">
         Passionate about crafting elegant solutions to complex problems. 
         <br />
-        I hold a Master's in Computer Applications (2023) with a stellar 
-        7.86 CGPA and a drive to innovate.
+        A highly motivated and detail-oriented Frontend Developer with hands-on experience in building responsive and user-friendly
+ web applications using HTML, CSS, JavaScript, React. Passionate about creating seamless UI/UX experiences, optimizing
+ performance, and ensuring cross-browser compatibility.Enthusiastic about continuous learning and contributing to innovative
+ web solutions
       </p>
       <button className="Btn">Let's Collaborate</button>
     </div>

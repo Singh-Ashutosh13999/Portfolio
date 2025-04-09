@@ -1,137 +1,185 @@
-/* Global Variables */
-:root {
-  --primary-color: #696969;
-  --secondary-color: #D2D9D3;
-  --accent-color: rgb(0, 100, 100);
-  --hover-color: green;
-  --text-color: white;
-}
-
-/* Skills Section */
-.Skill {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Experience Section */
+.experience {
   width: 100%;
   max-width: 70rem;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  margin: 6rem auto;
-  background-color: #E9F1FA;
+  margin: 4rem auto;
   padding: 2rem;
+  background-color: #f4f8fb;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.Skill:hover {
+.experience:hover {
   transform: scale(1.02);
 }
 
-/* Skills Title */
-.SkillsT {
+/* Experience Title */
+.experience-title {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #007991;
+  text-align: center;
   margin-bottom: 1.5rem;
-  color: #00ABE4;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Skills Description */
-.SkillsDec {
-  font-weight: 400;
-  font-size: 1.25rem;
-  max-width: 30rem;
-  padding: 0 2rem;
-  color: #00ABE4;
-  margin-bottom: 3rem;
-  line-height: 1.6;
-}
-
-/* Skills Bar Container */
-.SkillsBar {
-  margin: 2rem auto;
-  width: 100%;
-  max-width: 80%;
-  text-align: left;
-}
-
-/* Individual Skill Bar */
-.Sbar {
+/* Experience Item */
+.experience-item {
+  background-color: white;
   padding: 1.5rem;
-  display: flex;
-  margin: 1rem 0;
-  border-radius: 0.6rem;
-  background-color: #00ABE4;
-  align-items: center;
-  transition: background-color 0.3s ease;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Sbar:hover {
-  background-color: #FFFFFF;
+.experience-item:hover {
+  background-color: #e3f6f5;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Skill Bar Image */
-.SkillsBarImg {
-  object-fit: cover;
-  height: 4rem;
-  width: 4rem;
-  margin-right: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Job Title */
+.job-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #005f73;
+  margin-bottom: 0.5rem;
 }
 
-.SkillsBarImg:hover {
-  transform: scale(1.1);
+/* Job Duration */
+.job-duration {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007991;
+  margin-bottom: 1rem;
 }
 
-/* Skill Bar Text */
-.SbarText > p {
+/* Technologies Used */
+.technologies {
   font-size: 1rem;
-  font-weight: 300;
-  color: white;
-  line-height: 1.5;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.2rem;
 }
 
-/* Hover Effect for Headings */
-h2:hover {
-  border-bottom: 2px solid #00ABE4;
-  cursor: pointer;
-  color: #00ABE4;
-  transition: all 0.3s ease;
+/* Job Responsibilities */
+.job-responsibilities {
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.job-responsibilities li {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.job-responsibilities li::before {
+  content: "✔";
+  color: #00abe4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 2px;
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 720px) {
-  .Skill {
-    margin: 4rem auto;
+@media screen and (max-width: 768px) {
+  .experience {
     padding: 1.5rem;
+    margin: 2rem auto; /* Adjust margin to prevent overlap */
   }
 
-  .SkillsT {
+  .experience-title {
     font-size: 2rem;
   }
 
-  .SkillsDec {
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
-
-  .Sbar {
-    flex-direction: column;
-    text-align: center;
+  .experience-item {
     padding: 1rem;
   }
 
-  .SkillsBarImg {
-    margin: 0 0 1rem 0;
+  .job-title {
+    font-size: 1.5rem;
+  }
+
+  .job-duration {
+    font-size: 1.1rem;
+  }
+
+  .technologies {
+    font-size: 0.95rem;
+  }
+
+  .job-responsibilities li {
+    font-size: 0.95rem;
   }
 }
 
-@media screen and (min-width: 468px) {
-  .Skill {
-    padding: 2rem 4rem;
+/* Mobile Optimization */
+@media screen and (max-width: 480px) {
+  .experience {
+    padding: 1rem;
+    margin: 1.5rem auto; /* Avoid overlap */
+  }
+
+  .experience-title {
+    font-size: 1.8rem;
+  }
+
+  .experience-item {
+    padding: 0.8rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .job-duration {
+    font-size: 1rem;
+  }
+
+  .technologies {
+    font-size: 0.9rem;
+  }
+
+  .job-responsibilities li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 320px) {
+  .experience {
+    padding: 0.8rem;
+    margin: 1rem auto; /* Adjust margin */
+  }
+
+  .experience-title {
+    font-size: 1.6rem;
+  }
+
+  .experience-item {
+    padding: 0.6rem;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .job-duration {
+    font-size: 0.9rem;
+  }
+
+  .technologies {
+    font-size: 0.85rem;
+  }
+
+  .job-responsibilities li {
+    font-size: 0.85rem;
   }
 }

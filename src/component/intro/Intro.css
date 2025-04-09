@@ -1,204 +1,225 @@
 /* Global Variables */
 :root {
-    --primary-color: #00768a;
-    --accent-color: yellow;
-    --background-color: #000080;
-    --text-color: #000080;
-    --button-bg-color: #00768a;
-    --button-text-color: white;
-    --hover-bg-color: #005f70;
-  }
-  
-  /* Intro Section */
-  .intro {
-    background-color: #E9F1FA;
-    height: 100vh;
-    width: 100vw;
-    max-width: 65rem;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Align content and image side by side */
-    padding: 2rem;
-  }
-  
-  /* Background Image Styling */
-  .BI {
-    width: 45%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Content Styling */
-  .Introcontent {
-    width: 50%;
-    font-size: 2.5rem;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #00ABE4;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
+  --primary-color: #00768a;
+  --accent-color: yellow;
+  --background-color: #000080;
+  --text-color: #000080;
+  --button-bg-color: #00768a;
+  --button-text-color: white;
+  --hover-bg-color: #005f70;
+}
+
+/* Intro Section */
+.intro {
+  background-color: #E9F1FA;
+  height: 100vh;
+  width: 100vw;
+  max-width: 70rem;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align content and image side by side */
+  padding: 2rem;
+}
+
+/* Updated Image Styling */
+.BI {
+  width: 100%; /* Ensures full width */
+  max-width: 500px; /* Limits maximum width */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures no distortion */
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto; /* Centers the image */
+}
+
+/* Content Styling */
+.Introcontent {
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #00ABE4;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
       opacity: 0;
       transform: translateY(20px);
-    }
-    to {
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  @keyframes zoomIn {
-    from {
+}
+
+@keyframes zoomIn {
+  from {
       transform: scale(0.9);
-    }
-    to {
+  }
+  to {
       transform: scale(1);
-    }
   }
-  
-  /* Intro Text Styling */
-  .A {
-    font-weight: 100;
-    font-size: 2rem;
-    animation: fadeIn 1s ease-in;
-  }
-  
-  .B {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-top: 0.5rem;
-    animation: zoomIn 1.2s ease-in-out;
-  }
-  
-  .c {
-    color: var(--accent-color);
-  }
-  
-  /* Description Styling */
-  .D {
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    line-height: 1.5;
-    margin-top: 1rem;
-  }
-  
-  /* Button Styling */
-  .Btn {
-    background:  red;
-    color: var(--button-text-color);
-    height: 3rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    border: none;
-    margin: 1rem 0;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-  
-  .Btn:hover {
-    background: var(--hover-bg-color);
-  }
-  
-  /* Responsive Design */
- /* Responsive Design */
- @media screen and (max-width: 768px) {
+}
+
+/* Intro Text Styling */
+.A {
+  font-weight: 100;
+  font-size: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+.B {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  animation: zoomIn 1.2s ease-in-out;
+}
+
+.c {
+  color: var(--accent-color);
+}
+
+/* Description Styling */
+.D {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+/* Button Styling */
+.Btn {
+  background: red;
+  color: var(--button-text-color);
+  height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  border: none;
+  margin: 1rem 0;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.Btn:hover {
+  background: var(--hover-bg-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .intro {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
   }
 
   .Introcontent {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center; /* Centers the text content */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; /* Centers the text content */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers content horizontally */
   }
 
+  /* Image fully visible */
   .BI {
-    width: 70%;
-    margin: 1rem auto;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain; /* Ensures the entire image is shown */
   }
 
   .B {
-    font-size: 1.8rem;
-    text-align: center;
+      font-size: 1.8rem;
+      text-align: center;
   }
 
   .D {
-    font-size: 0.9rem;
-    text-align: center;
+      font-size: 0.9rem;
+      text-align: center;
   }
 
   .Btn {
-    height: 2.3rem;
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-    margin: 1rem 0;
+      height: 2.3rem;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+      margin: 1rem 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro {
-    padding: 0.8rem;
+      padding: 0.8rem;
+  }
+
+  /* Full-width image on smaller screens */
+  .BI {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
   }
 
   .B {
-    font-size: 1.6rem;
+      font-size: 1.6rem;
   }
 
   .D {
-    font-size: 0.85rem;
+      font-size: 0.85rem;
   }
 
   .Btn {
-    height: 2rem;
-    font-size: 0.85rem;
-    padding: 0.3rem 0.7rem;
+      height: 2rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.7rem;
   }
 
   .Introcontent {
-    text-align: center;
-    align-items: center;
+      text-align: center;
+      align-items: center;
   }
 }
 
 @media screen and (max-width: 320px) {
   .intro {
-    padding: 0.5rem;
+      padding: 0.5rem;
+  }
+
+  /* Image covers full width */
+  .BI {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
   }
 
   .B {
-    font-size: 1.4rem;
+      font-size: 1.4rem;
   }
 
   .D {
-    font-size: 0.8rem;
+      font-size: 0.8rem;
   }
 
   .Btn {
-    height: 1.8rem;
-    font-size: 0.8rem;
-    padding: 0.25rem 0.6rem;
+      height: 1.8rem;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
   }
 
   .Introcontent {
-    text-align: center;
-    align-items: center;
+      text-align: center;
+      align-items: center;
   }
 }

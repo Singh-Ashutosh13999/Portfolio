@@ -34,7 +34,7 @@ const Footer = () => {
           <img src={Resume} alt='Resume' />
         </a>
       </div>
-      <p>© {new Date().getFullYear()} Ashutosh Kumar Singh. All rights reserved.</p>
+      <p className="footer-text">© {new Date().getFullYear()} Ashutosh Kumar Singh. All rights reserved.</p>
     </footer>
   );
 };

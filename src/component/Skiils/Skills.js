@@ -8,33 +8,25 @@ import App from "..//..//assest//App.jpg"
     <span className='SkillsT'> What I Do </span>
     <br/>
     <span className='SkillsDec'> 
-        I am a passionate Software Developer who loves building innovative solutions. 
-        Turning ideas into reality with modern tools and technologies is what drives me.
-    </span>
-    <div className='SkillsBar'>
-        <div className='Sbar'>
-            <img src={Skiils} alt="Skills" className='SkillsBarImg' />
-            <div className='SbarText'>
-                <h2>Web Development</h2>
-                <p>
-                    Crafting visually stunning and user-friendly web applications 
-                    using technologies like HTML, CSS, JavaScript, and ReactJS. 
-                    I ensure each project is both functional and aesthetically appealing.
-                </p>
-            </div>
-        </div>
-        <div className='Sbar'>
-            <img src={App} alt="AppImg" className='SkillsBarImg' />
-            <div className='SbarText'>
-                <h2>App Development</h2>
-                <p>
-                    Building sleek and interactive mobile applications with technologies 
-                    like HTML, CSS, JavaScript, and React Native. My focus is on creating 
-                    seamless user experiences that captivate and engage.
-                </p>
-            </div>
-        </div>
+    <section className="experience" id="experience">
+    <h2 className="experience-title">Experience</h2>
+    <div className="experience-item">
+        <h3 className="job-title">FrontEnd Developer — GeoGo Infotech</h3>
+        <p className="job-duration">Oct 2024 - Present</p>
+        <p className="technologies">Technologies: JavaScript, HTML/CSS, Bootstrap, SEO</p>
+        <ul className="job-responsibilities">
+            <li>Leading the development and management of the ChikuCab project, delivering key features, updates, and optimizations to enhance functionality and user experience.</li>
+            <li>Spearheaded on-page optimization efforts, including meta descriptions and schema markup, leading to a substantial increase in qualified leads.</li>
+            <li>Collaborating with teams to ensure smooth project delivery aligned with business requirements.</li>
+            <li>Developed responsive and visually appealing web applications using HTML, CSS, and JavaScript.</li>
+            <li>Worked closely with the team to ensure seamless user experiences and cross-browser compatibility.</li>
+            <li>Contributed to project documentation and provided actionable suggestions for improving UI/UX designs.</li>
+        </ul>
     </div>
+</section>
+
+    </span>
+    
 </section>
 
   )

@@ -1,155 +1,84 @@
-/* Global Variables */
-:root {
-  --primary-color: rgb(0, 118, 130);
-  --accent-color: yellow;
-  --background-color: #f0f0f0;
-  --card-bg-color: rgba(255, 255, 255, 0.9);
-  --text-color: white;
-  --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Keyframes for Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes hoverZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-/* Work Section Styling */
+/* Work Section */
 .Work {
-  margin: 4rem auto;
   width: 100%;
   max-width: 70rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin:  auto;
+  padding: 2rem;
   text-align: center;
-  padding: 2rem 1.5rem;
-  background-color:#E9F1FA;
+  background: linear-gradient(135deg, #007991, #78ffd6);
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.8s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Work Title Styling */
+.Work:hover {
+  transform: scale(1.02);
+}
+
+/* Work Title */
 .WorkT {
-  color: #00ABE4;
   font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
   margin-bottom: 1rem;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Work Description Styling */
+/* Work Description */
 .WorkD {
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: #00ABE4;
-  max-width: 40rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f8f8f8;
   margin-bottom: 2rem;
-  line-height: 1.5;
-}
-/* Certificate Button Styling */
-.certificate-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem; /* Button text size */
-  color: var(--button-text-color); /* Text color */
-  background: var(--button-bg-color); /* Button background color */
-  border: none;
-  border-radius: 1.5rem; /* Rounded corners */
-  padding: 0.75rem 1.5rem; /* Button padding */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer;
-  margin: auto;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Hover Effect */
-.certificate-button:hover {
-  background: var(--hover-bg-color); /* Change background color on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 480px) {
-  .certificate-button {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem; /* Adjust padding for smaller screens */
-  }
-}
-
-
-/* Work Images Container */
+/* Work Images Grid */
 .WorkImgs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  width: 100%;
+  margin-top: 2rem;
 }
 
-/* Individual Image Card */
+/* Individual Work Image Box */
 .WorkImg {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: var(--card-bg-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  animation: fadeIn 0.8s ease-in-out;
+  border-radius: 0.8rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .WorkImg:hover {
-  animation: hoverZoom 0.3s ease-in-out forwards;
-  box-shadow: var(--hover-shadow);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Adding Animation */
-.WorkImg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Work Image */
+.WorkImg img {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
-.WorkImg:hover::before {
-  opacity: 1;
+.WorkImg:hover img {
+  transform: scale(1.1);
 }
 
-/* Animation for Image Content */
+/* Work Image Content (Hover Effect) */
 .WorkImgContent {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--text-color);
-  font-size: 1rem;
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -161,26 +90,10 @@
   transform: translateY(0);
 }
 
-/* Animation for Work Section */
-@keyframes sectionFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-  .WorkImgs {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .WorkImg {
-    height: 200px;
+  .Work {
+    padding: 1.5rem;
   }
 
   .WorkT {
@@ -188,25 +101,18 @@
   }
 
   .WorkD {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
-}
 
-@media screen and (max-width: 480px) {
   .WorkImgs {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .WorkImg {
+  .WorkImg img {
     height: 180px;
   }
 
-  .WorkT {
-    font-size: 1.75rem;
-  }
-
-  .WorkD {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+  .WorkImgContent {
+    font-size: 1rem;
   }
 }

@@ -10,16 +10,6 @@ import Unit from "..//..//assest//Unit.jpg"
 const Works = () => {
   return ( 
      <section className='Work' id='Works'>
-     <h4 className='WorkT'>Experience</h4>
-     <span className='WorkD'>During my work in Web Technology, I gained hands-on experience designing and developing responsive web applications using HTML, CSS, JavaScript, and ReactJS. I collaborated with teams to create user-friendly interfaces, deployed and maintained websites for optimal performance, and honed my skills with modern web development tools and frameworks, bridging theory and real-world practice.</span>
-     <a
-  href="https://example.com/certificate"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="certificate-button"
->
-  View Certificate
-</a>
 
      
            <div className='Work'>
