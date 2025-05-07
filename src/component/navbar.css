@@ -5,13 +5,25 @@
   --hover-border-color: yellow;
   --bg-color: rgb(30, 30, 30);
   --text-color: white;
-  --gradient-bg: linear-gradient(135deg, #007991, #00abe4);
+  --gradient-bg:  #00FFFF /* Updated gradient */
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar Styling */
+
+.desktopMenu {
+  display: flex;
+  gap: 2rem; /* Adjust spacing as needed */
+  align-items: center;
+}
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto; /* Pushes it to the right side */
+}
 .navbar {
-  background: var(--gradient-bg);
+  background:  linear-gradient(135deg, #00f0ff, #ff4081);;
   width: 100%;
   max-width: 100rem;
   height: 4rem;
@@ -20,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
@@ -40,9 +52,17 @@
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
 }
 
+/* Move the Menu items (Headmenu) to the right side */
+.navbar .menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 1.5rem;
+}
+
 /* Header Menu Styling */
 .Headmenu {
-  margin: 1rem;
   cursor: pointer;
   font-weight: 500;
   font-size: 1.1rem;
@@ -58,7 +78,7 @@
 
 /* Menu Button Styling */
 .Menubuttom {
-  background: white;
+  
   color: var(--primary-color);
   display: flex;
   align-items: center;
@@ -73,7 +93,7 @@
 }
 
 .Menubuttom:hover {
-  background: var(--secondary-color);
+  background:   linear-gradient(135deg, #00f0ff, #ff4081);;
   color: white;
   transform: scale(1.05);
 }

@@ -1,77 +1,90 @@
-/* Footer Styling */
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 10px;
-  background: linear-gradient(135deg, #007991, #78ffd6); /* Teal to Light Green */
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2); /* Subtle top shadow */
+  background:  linear-gradient(135deg,rgb(72, 92, 97), #00f0ff);;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
 }
 
-/* Social Media Icons Container */
-.link {
+.footer-socials {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between icons */
-  margin-bottom: 10px;
+  gap: 30px;
+  margin-bottom: 25px;
 }
 
-/* Icon Styling */
-.icon {
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+.footer-socials a img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0.9);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footer-bottom {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: white;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.top-button {
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.top-button:hover {
+  background: #f50057;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /* distance from bottom */
+  right: 10px;
+  z-index: 1000;
+  background: linear-gradient(120deg, #00f0ff, #ff4081);;
+  color: white;
+  border: none;
+  padding: 10px 14px;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s;
 }
 
-/* Icon Images */
-.icon img {
-  width: 32px; /* Smaller, more refined icon size */
-  height: 32px;
-  object-fit: contain;
+.back-to-top:hover {
+  
+  transform: translateY(-3px);
 }
 
-/* Hover Effects */
-.icon:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-  box-shadow: 0px 6px 12px rgba(0, 171, 228, 0.4); /* Highlighted hover effect */
-}
 
-/* Footer Text */
-.footer p {
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin-top: 12px;
-  opacity: 0.8;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-  .icon {
-    width: 40px;
-    height: 40px;
-    padding: 4px;
-  }
-
-  .icon img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .footer p {
-    font-size: 0.85rem;
+/* Responsive */
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
   }
 }

@@ -1,185 +1,151 @@
-/* Experience Section */
-.experience {
-  width: 100%;
-  max-width: 70rem;
-  margin: 4rem auto;
-  padding: 2rem;
-  background-color: #f4f8fb;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.skills-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 60px 20px;
+  transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
-.experience:hover {
+.skills-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #00e6e6;
+}
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.experience-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #00e6e6;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #00e6e6;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-card:hover {
   transform: scale(1.02);
 }
 
-/* Experience Title */
-.experience-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #007991;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.left {
+  align-self: flex-start;
 }
 
-/* Experience Item */
-.experience-item {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.right {
+  align-self: flex-end;
 }
 
-.experience-item:hover {
-  background-color: #e3f6f5;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.duration {
+  font-style: italic;
+  color: #a0f0f0;
+  margin-bottom: 10px;
+  display: block;
 }
 
-/* Job Title */
-.job-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #005f73;
-  margin-bottom: 0.5rem;
-}
-
-/* Job Duration */
-.job-duration {
-  font-size: 1.2rem;
+.tech-stack {
+  margin: 10px 0;
   font-weight: 500;
-  color: #007991;
-  margin-bottom: 1rem;
+  color: #e0ffff;
 }
 
-/* Technologies Used */
-.technologies {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 1.2rem;
-}
-
-/* Job Responsibilities */
-.job-responsibilities {
-  padding-left: 1.5rem;
-  list-style: none;
-}
-
-.job-responsibilities li {
-  font-size: 1rem;
-  color: #444;
+.details {
+  margin: 0;
+  padding-left: 20px;
   line-height: 1.6;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
-  position: relative;
+  color: #f0f0f0;
 }
 
-.job-responsibilities li::before {
-  content: "✔";
-  color: #00abe4;
-  font-size: 1.2rem;
-  font-weight: bold;
+.details li {
+  margin-bottom: 8px;
+}
+
+/* Arrows */
+.left::after {
+  content: '➜';
   position: absolute;
-  left: 0;
-  top: 2px;
+  top: 20px;
+  right: -25px;
+  font-size: 1.5rem;
+  color: #00e6e6;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .experience {
-    padding: 1.5rem;
-    margin: 2rem auto; /* Adjust margin to prevent overlap */
+.right::after {
+  content: '◀';
+  position: absolute;
+  top: 20px;
+  left: -25px;
+  font-size: 1.5rem;
+  color: #00e6e6;
+}
+
+/* Tablet Responsive (<=768px) */
+@media (max-width: 768px) {
+  .experience-card {
+    align-self: center !important;
+    width: 90%;
   }
 
-  .experience-title {
-    font-size: 2rem;
+  .skills-title {
+    font-size: 2.2rem;
   }
 
-  .experience-item {
-    padding: 1rem;
-  }
-
-  .job-title {
-    font-size: 1.5rem;
-  }
-
-  .job-duration {
-    font-size: 1.1rem;
-  }
-
-  .technologies {
-    font-size: 0.95rem;
-  }
-
-  .job-responsibilities li {
-    font-size: 0.95rem;
+  .experience-wrapper::before,
+  .left::after,
+  .right::after {
+    display: none;
   }
 }
 
-/* Mobile Optimization */
-@media screen and (max-width: 480px) {
-  .experience {
-    padding: 1rem;
-    margin: 1.5rem auto; /* Avoid overlap */
-  }
-
-  .experience-title {
+/* Phone Responsive (<=480px) */
+@media (max-width: 480px) {
+  .skills-title {
     font-size: 1.8rem;
   }
 
-  .experience-item {
-    padding: 0.8rem;
+  .experience-card {
+    padding: 16px;
+    width: 100%;
+    font-size: 0.95rem;
   }
 
-  .job-title {
-    font-size: 1.3rem;
+  .tech-stack {
+    font-size: 0.95rem;
   }
 
-  .job-duration {
-    font-size: 1rem;
-  }
-
-  .technologies {
+  .duration {
     font-size: 0.9rem;
   }
 
-  .job-responsibilities li {
+  .details {
+    padding-left: 15px;
     font-size: 0.9rem;
-  }
-}
-
-/* Extra Small Screens */
-@media screen and (max-width: 320px) {
-  .experience {
-    padding: 0.8rem;
-    margin: 1rem auto; /* Adjust margin */
-  }
-
-  .experience-title {
-    font-size: 1.6rem;
-  }
-
-  .experience-item {
-    padding: 0.6rem;
-  }
-
-  .job-title {
-    font-size: 1.2rem;
-  }
-
-  .job-duration {
-    font-size: 0.9rem;
-  }
-
-  .technologies {
-    font-size: 0.85rem;
-  }
-
-  .job-responsibilities li {
-    font-size: 0.85rem;
   }
 }

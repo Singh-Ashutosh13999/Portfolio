@@ -1,40 +1,66 @@
-import React from 'react'
-import "./Education.css"
- const Education = () => {
-  return (
-    <section className="ED" id="Education">
-  <div className="EHead">
-    <h1 className="EH">Education Detail</h1>
-    <span className="EDesc">
-      In this, I will explain my entire education journey from class 10 till now.
-    </span>
-  </div>
-  <div className="Result">
-    <ul className="R">
-      <li className="H1">
-        <h1>High School</h1>
-        <h3>Udai Pratap Inter College</h3>
-        <p>78%</p>
-      </li>
-      <li className="I">
-        <h1>Intermediate</h1>
-        <h3>Udai Pratap Inter College</h3>
-        <p>69.20%</p>
-      </li>
-      <li className="UG">
-        <h1>Under-Graduate</h1>
-        <h3>M G K V P</h3>
-        <p>62.75%</p>
-      </li>
-      <li className="PG">
-        <h1>Post-Graduate</h1>
-        <h3>Institute of Engineering and Technology</h3>
-        <p>7.86 CGPA</p>
-      </li>
-    </ul>
-  </div>
-</section>
+import React, { useEffect } from 'react';
+import './Education.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { FaArrowDown } from 'react-icons/fa';
 
-  )
-}
+const educationData = [
+  {
+    level: 'High School',
+    institute: 'Udai Pratap Inter College',
+    result: '78%',
+    icon: 'fa-school',
+  },
+  {
+    level: 'Intermediate',
+    institute: 'Udai Pratap Inter College',
+    result: '69.20%',
+    icon: 'fa-school',
+  },
+  {
+    level: 'Under-Graduate',
+    institute: 'M G K V P',
+    result: '62.75%',
+    icon: 'fa-graduation-cap',
+  },
+  {
+    level: 'Post-Graduate',
+    institute: 'Institute of Engineering and Technology',
+    result: '7.86 CGPA',
+    icon: 'fa-graduation-cap',
+  }
+];
+
+const Education = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  return (
+    <section className="education-section" id="Education">
+      <h2 className="education-title">Education</h2>
+      <p className="education-description">My academic journey from school to post-graduation.</p>
+
+      <div className="education-list">
+        {educationData.map((item, index) => (
+          <div className="education-row" key={index} data-aos="fade-up">
+            <div className="edu-top">
+              <i className={`fas ${item.icon} edu-icon`}></i>
+              <h3>{item.institute}</h3>
+            </div>
+            <div className="edu-arrow">
+  <FaArrowDown className="edu-arrow-icon" />
+</div>
+            <div className="edu-bottom">
+              <p className="level">{item.level}</p>
+              <p className="result">{item.result}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 export default Education;
